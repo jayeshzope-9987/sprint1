@@ -1,90 +1,256 @@
-body{
-    font-family: arial;
-    background-color: #f0f2f5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.container{
-    align-items: center;
-    padding-top: 55px;
-    min-height: 100px;
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #a8e5ed;
+    min-height: 100vh;
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    padding: 55px 20px 30px;
+    display: flex;
     flex-direction: column;
-}
-h1{
-    color: blue;
-    font-size: 50px;
-    font-width: bold;
-    margin-bottom: 20px;
-    text-align: center;
-}
-.signup-box{
-    width:350px;
-    background-color: white;
-    border-radius: 7px;
-}
-.header{
-    text-align: center;
-    padding: 11px 15px 12px;
-    border-bottom: 1px solid #dddfe2;
-}
-.header h2 {
-    font-size: 20px;
-    margin-bottom: 5px;
-    color: #1c1e21;
-}
-.header p{
-    font-size: 15px;
-    color: #606770;
-}
-form{
-    padding: 14px;
-}
-button{
-    display: block;
-    width: 165px;
-    height: 32px;
-    margin: 60px;
-    background-color: #008400;
-    color: white;
-    border: none;
-    font-size: 16px;
-    font-width: bold;
-}
-.name-row{
-    margin-bottom: 5px;
-    gap: 9px;
-    display: flex;
- 
-}
-.name-row input{
-    width:50%;
-}
-.full-input{
-    width:100%;
-    margin-bottom: 9px;
-}
-.gender-row{
-    display: flex;
-    gap: 10px;
-    margin-bottom: 7px;
-}
-.gender-option{
-    width: 75px;
-    height: 20px;
-    border: 1px solid #ccd0b5;
-    padding: 7px 8px;
-    font-size: 13px;
-    display: flex;
-    justify-content: space-between;
     align-items: center;
 }
-.gender-option input{
-    margin-left: 5px;
+
+/* Main form */
+
+.form-container {
+    width: 680px;
+    max-width: 100%;
+    background-color: #ffffff;
+    border: 1px solid #b8b8b8;
+    padding: 20px 18px 15px;
+    box-shadow: 14px 14px 0 rgba(95, 160, 168, 0.35);
+    position: relative;
 }
-.select-row{
+
+/* Inner border */
+
+.form-container::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: 1px solid #aaa;
+    pointer-events: none;
+}
+
+/* Heading */
+
+h1 {
+    text-align: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.description {
+    text-align: center;
+    font-size: 8px;
+    line-height: 11px;
+    color: #333;
+    max-width: 500px;
+    margin: 0 auto 10px;
+}
+
+/* Grid */
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 8px;
+    row-gap: 5px;
+}
+
+/* Individual field */
+
+.field {
     display: flex;
-    gap: 10px;
-    margin-bottom: 11px;
-   
+    align-items: center;
+    min-height: 25px;
+}
+
+.field > label {
+    width: 95px;
+    flex-shrink: 0;
+    font-size: 8px;
+    color: #333;
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="date"],
+.field input[type="time"] {
+    width: 100%;
+    height: 25px;
+    border: none;
+    background-color: #f1f1f1;
+    outline: none;
+    padding: 4px 6px;
+    font-size: 9px;
+}
+
+.field input:focus {
+    background-color: #e8e8e8;
+}
+
+/* Phone */
+
+.phone-options {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.phone-options label {
+    width: auto;
+    font-size: 8px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.phone-options input {
+    width: 9px;
+    height: 9px;
+    margin: 0;
+}
+
+/* Section headings */
+
+.section-title {
+    height: 27px;
+    background-color: #d0d0d0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: bold;
+    color: #111;
+    margin: 10px 0 6px;
+    position: relative;
+}
+
+/* Three columns */
+
+.three-columns {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 7px;
+}
+
+.three-columns .field > label {
+    width: 55px;
+}
+
+/* Payment */
+
+.payment-row {
+    display: grid;
+    grid-template-columns: 1fr 110px;
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.payment-row .field > label {
+    width: 120px;
+}
+
+.money-field {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    background: #f1f1f1;
+}
+
+.money-field span {
+    width: 25px;
+    text-align: center;
+    font-size: 10px;
+    color: #222;
+}
+
+.money-field input {
+    width: calc(100% - 25px);
+    height: 25px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+/* Bottom paragraph */
+
+.bottom-description {
+    font-size: 8px;
+    line-height: 11px;
+    color: #333;
+    margin: 14px 0 5px;
+}
+
+/* Website */
+
+.website {
+    text-align: center;
+    font-size: 7px;
+    color: #555;
+    margin-top: 12px;
+    margin-bottom: 2px;
+}
+
+/* Credit */
+
+.credit {
+    margin-top: 38px;
+    color: #222;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+}
+
+.credit strong {
+    font-size: 22px;
+}
+
+/* Responsive */
+
+@media (max-width: 700px) {
+
+    .page {
+        padding: 25px 10px;
+    }
+
+    .form-container {
+        width: 100%;
+        padding: 18px 12px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .three-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .payment-row {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        margin-top: 12px;
+    }
+
+    .credit {
+        font-size: 16px;
+    }
 }
