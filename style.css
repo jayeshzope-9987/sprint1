@@ -1,256 +1,358 @@
+/* Remove default spacing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+/* Body */
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #a8e5ed;
-    min-height: 100vh;
+    background-color: #000;
 }
 
-.page {
+
+/* Main Website */
+.main {
     width: 100%;
     min-height: 100vh;
-    padding: 55px 20px 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.45),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("background.jpg");
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-/* Main form */
 
-.form-container {
-    width: 680px;
-    max-width: 100%;
-    background-color: #ffffff;
-    border: 1px solid #b8b8b8;
-    padding: 20px 18px 15px;
-    box-shadow: 14px 14px 0 rgba(95, 160, 168, 0.35);
-    position: relative;
-}
+/* Navigation Bar */
+.navbar {
+    width: 90%;
+    height: 80px;
+    margin: auto;
 
-/* Inner border */
-
-.form-container::before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    right: 5px;
-    bottom: 5px;
-    border: 1px solid #aaa;
-    pointer-events: none;
-}
-
-/* Heading */
-
-h1 {
-    text-align: center;
-    font-size: 25px;
-    font-weight: 700;
-    color: #111;
-    margin-bottom: 10px;
-    position: relative;
-}
-
-.description {
-    text-align: center;
-    font-size: 8px;
-    line-height: 11px;
-    color: #333;
-    max-width: 500px;
-    margin: 0 auto 10px;
-}
-
-/* Grid */
-
-.form-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 8px;
-    row-gap: 5px;
-}
-
-/* Individual field */
-
-.field {
     display: flex;
     align-items: center;
-    min-height: 25px;
+    justify-content: space-between;
 }
 
-.field > label {
-    width: 95px;
-    flex-shrink: 0;
-    font-size: 8px;
-    color: #333;
-}
 
-.field input[type="text"],
-.field input[type="email"],
-.field input[type="date"],
-.field input[type="time"] {
-    width: 100%;
-    height: 25px;
-    border: none;
-    background-color: #f1f1f1;
-    outline: none;
-    padding: 4px 6px;
-    font-size: 9px;
-}
-
-.field input:focus {
-    background-color: #e8e8e8;
-}
-
-/* Phone */
-
-.phone-options {
-    height: 25px;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-}
-
-.phone-options label {
-    width: auto;
-    font-size: 8px;
-    display: flex;
-    align-items: center;
-    gap: 2px;
-}
-
-.phone-options input {
-    width: 9px;
-    height: 9px;
-    margin: 0;
-}
-
-/* Section headings */
-
-.section-title {
-    height: 27px;
-    background-color: #d0d0d0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
+/* Logo */
+.logo {
+    color: #ff7200;
+    font-size: 30px;
     font-weight: bold;
-    color: #111;
-    margin: 10px 0 6px;
-    position: relative;
 }
 
-/* Three columns */
 
-.three-columns {
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 7px;
-}
-
-.three-columns .field > label {
-    width: 55px;
-}
-
-/* Payment */
-
-.payment-row {
-    display: grid;
-    grid-template-columns: 1fr 110px;
-    gap: 8px;
-    margin-top: 5px;
-}
-
-.payment-row .field > label {
-    width: 120px;
-}
-
-.money-field {
-    height: 25px;
+/* Menu */
+.menu {
     display: flex;
-    align-items: center;
-    background: #f1f1f1;
+    list-style: none;
+    gap: 35px;
 }
 
-.money-field span {
-    width: 25px;
-    text-align: center;
-    font-size: 10px;
-    color: #222;
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+
+    transition: 0.3s;
 }
 
-.money-field input {
-    width: calc(100% - 25px);
-    height: 25px;
-    border: none;
+
+.menu li a:hover {
+    color: #ff7200;
+}
+
+
+/* Search Area */
+.search {
+    display: flex;
+    height: 40px;
+}
+
+
+.search input {
+    width: 160px;
+    padding: 10px;
+
     background: transparent;
+    border: 1px solid #ff7200;
+
+    color: white;
     outline: none;
 }
 
-/* Bottom paragraph */
 
-.bottom-description {
-    font-size: 8px;
-    line-height: 11px;
-    color: #333;
-    margin: 14px 0 5px;
+.search input::placeholder {
+    color: #ddd;
 }
 
-/* Website */
 
-.website {
+.search button {
+    width: 80px;
+
+    border: none;
+    background: #ff7200;
+    color: white;
+
+    cursor: pointer;
+    font-weight: bold;
+}
+
+
+.search button:hover {
+    background: #e65f00;
+}
+
+
+/* Main Content */
+.content {
+    width: 90%;
+    margin: 80px auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Left Content */
+.left-content {
+    width: 55%;
+}
+
+
+.left-content h1 {
+    color: white;
+    font-family: Georgia, serif;
+
+    font-size: 50px;
+    line-height: 1.15;
+}
+
+
+.left-content h1 span {
+    color: #ff7200;
+}
+
+
+.left-content p {
+    margin-top: 15px;
+
+    color: white;
+    font-size: 15px;
+    line-height: 1.8;
+
+    letter-spacing: 0.5px;
+}
+
+
+/* Join Button */
+.join-btn {
+    margin-top: 25px;
+
+    width: 130px;
+    height: 40px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #ff7200;
+    color: white;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.join-btn:hover {
+    background: white;
+    color: #ff7200;
+}
+
+
+/* Login Box */
+.login-box {
+    width: 240px;
+
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+
+/* Login Heading */
+.login-box h2 {
+    background: white;
+
+    color: #d2691e;
+
     text-align: center;
-    font-size: 7px;
-    color: #555;
-    margin-top: 12px;
-    margin-bottom: 2px;
+
+    padding: 8px;
+
+    border-radius: 7px;
+
+    font-size: 18px;
 }
 
-/* Credit */
 
-.credit {
-    margin-top: 38px;
-    color: #222;
+/* Login Inputs */
+.login-box input {
+    width: 100%;
+
+    margin-top: 25px;
+    padding: 10px 5px;
+
+    background: transparent;
+
+    border: none;
+    border-bottom: 1px solid #ff7200;
+
+    color: white;
+
+    outline: none;
+}
+
+
+.login-box input::placeholder {
+    color: #ddd;
+}
+
+
+/* Login Button */
+.login-btn {
+    width: 100%;
+
+    margin-top: 25px;
+    padding: 10px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #ff7200;
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+
+.login-btn:hover {
+    background: white;
+    color: #ff7200;
+}
+
+
+/* Account Text */
+.account {
+    color: white;
+    text-align: center;
+
+    font-size: 13px;
+
+    margin-top: 15px;
+}
+
+
+.account a {
+    color: #ff7200;
+    text-decoration: none;
+}
+
+
+/* Login With */
+.login-with {
+    color: white;
+
+    text-align: center;
+
+    margin-top: 15px;
+
+    font-size: 13px;
+}
+
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 18px;
+
+    margin-top: 15px;
+}
+
+
+.social-icons a {
+    color: white;
+
     font-size: 20px;
-    letter-spacing: -0.5px;
+
+    text-decoration: none;
+
+    transition: 0.3s;
 }
 
-.credit strong {
-    font-size: 22px;
+
+.social-icons a:hover {
+    color: #ff7200;
+
+    transform: translateY(-3px);
 }
 
-/* Responsive */
 
-@media (max-width: 700px) {
+/* Responsive Design */
+@media screen and (max-width: 900px) {
 
-    .page {
-        padding: 25px 10px;
+    .navbar {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+        gap: 20px;
     }
 
-    .form-container {
+    .menu {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .content {
+        flex-direction: column;
+        gap: 50px;
+
+        margin-top: 50px;
+    }
+
+    .left-content {
         width: 100%;
-        padding: 18px 12px;
+        text-align: center;
     }
 
-    .form-grid {
-        grid-template-columns: 1fr;
+    .left-content h1 {
+        font-size: 40px;
     }
 
-    .three-columns {
-        grid-template-columns: 1fr;
-    }
-
-    .payment-row {
-        grid-template-columns: 1fr;
-    }
-
-    .section-title {
-        margin-top: 12px;
-    }
-
-    .credit {
-        font-size: 16px;
+    .login-box {
+        width: 280px;
     }
 }
