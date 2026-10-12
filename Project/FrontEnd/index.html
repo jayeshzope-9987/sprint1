@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zeps Cloud Kitchen — South Indian cafe, delivered hot</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Hind+Madurai:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
+  <div class="wrap header-row">
+    <a href="#top" class="logo">Zeps<span>.</span></a>
+
+    <nav class="nav" id="siteNav">
+      <a href="#menu">Menu</a>
+      <a href="#why">Why Zeps</a>
+      <a href="#hours">Hours</a>
+      <a href="login.html">Login</a>
+    </nav>
+
+    <button class="cart-btn" id="cartOpen" aria-label="Open cart">
+      Cart <span class="cart-count" id="cartCount">0</span>
+    </button>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="top">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow rise" style="--i:0">Cloud kitchen · South &amp; North Indian</p>
+        <h1 class="rise" style="--i:1">Kaapi is brewing.<br><em>Dosa</em> is on the tawa.</h1>
+        <p class="hero-sub rise" style="--i:2">
+          Crisp dosas, soft idlis and strong filter kaapi, made to order in our kitchen and
+          at your door while they're still hot. North Indian favourites are on the menu too.
+        </p>
+        <div class="hero-actions rise" style="--i:3">
+          <a href="#menu" class="btn btn-primary">See the menu</a>
+          <a href="login.html" class="btn btn-ghost">Login to order</a>
+        </div>
+        <ul class="hero-facts rise" style="--i:4">
+          <li><strong>30 min</strong> average delivery</li>
+          <li><strong>Fresh batter</strong> ground every morning</li>
+          <li><strong>Filter kaapi</strong> served all day</li>
+        </ul>
+      </div>
+
+      <!-- SIGNATURE: kolam drawing itself around a steaming kaapi tumbler -->
+      <div class="hero-visual" aria-hidden="true">
+        <svg class="kolam" viewBox="-200 -200 400 400" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <circle class="draw" pathLength="1" r="182" stroke="#D4A537" stroke-width="1.5" style="--d:0s"/>
+          <circle class="draw" pathLength="1" r="170" stroke="#D4A537" stroke-width="1" stroke-opacity=".5" style="--d:.3s"/>
+
+          <g class="spin">
+            <g stroke="#D4A537" stroke-width="2.5">
+              <path class="draw" pathLength="1" style="--d:.6s"  d="M0 0 C34 -44 34 -108 0 -150 C-34 -108 -34 -44 0 0Z"/>
+              <path class="draw" pathLength="1" style="--d:.75s" transform="rotate(45)"  d="M0 0 C34 -44 34 -108 0 -150 C-34 -108 -34 -44 0 0Z"/>
+              <path class="draw" pathLength="1" style="--d:.9s"  transform="rotate(90)"  d="M0 0 C34 -44 34 -108 0 -150 C-34 -108 -34 -44 0 0Z"/>
+              <path class="draw" pathLength="1" style="--d:1.05s" transform="rotate(135)" d="M0 0 C34 -44 34 -108 0 -150 C-34 -108 -34 -44 0 0Z"/>
+              <path class="draw" pathLength="1" style="--d:1.2s" transform="rotate(180)" d="M0 0 C34 -44 34 -108 0 -150 C-34 -108 -34 -44 0 0Z"/>
+              <path class="draw" pathLength="1" style="--d:1.35s" transform="rotate(225)" d="M0 0 C34 -44 34 -108 0 -150 C-34 -108 -34 -44 0 0Z"/>
+              <path class="draw" pathLength="1" style="--d:1.5s" transform="rotate(270)" d="M0 0 C34 -44 34 -108 0 -150 C-34 -108 -34 -44 0 0Z"/>
+              <path class="draw" pathLength="1" style="--d:1.65s" transform="rotate(315)" d="M0 0 C34 -44 34 -108 0 -150 C-34 -108 -34 -44 0 0Z"/>
+            </g>
+            <g stroke="#FBF8F0" stroke-width="1.5" stroke-opacity=".8">
+              <path class="draw" pathLength="1" style="--d:1.8s"  transform="rotate(22.5)"  d="M0 0 C18 -26 18 -62 0 -88 C-18 -62 -18 -26 0 0Z"/>
+              <path class="draw" pathLength="1" style="--d:1.9s"  transform="rotate(67.5)"  d="M0 0 C18 -26 18 -62 0 -88 C-18 -62 -18 -26 0 0Z"/>
+              <path class="draw" pathLength="1" style="--d:2s"    transform="rotate(112.5)" d="M0 0 C18 -26 18 -62 0 -88 C-18 -62 -18 -26 0 0Z"/>
+              <path class="draw" pathLength="1" style="--d:2.1s"  transform="rotate(157.5)" d="M0 0 C18 -26 18 -62 0 -88 C-18 -62 -18 -26 0 0Z"/>
+              <path class="draw" pathLength="1" style="--d:2.2s"  transform="rotate(202.5)" d="M0 0 C18 -26 18 -62 0 -88 C-18 -62 -18 -26 0 0Z"/>
+              <path class="draw" pathLength="1" style="--d:2.3s"  transform="rotate(247.5)" d="M0 0 C18 -26 18 -62 0 -88 C-18 -62 -18 -26 0 0Z"/>
+              <path class="draw" pathLength="1" style="--d:2.4s"  transform="rotate(292.5)" d="M0 0 C18 -26 18 -62 0 -88 C-18 -62 -18 -26 0 0Z"/>
+              <path class="draw" pathLength="1" style="--d:2.5s"  transform="rotate(337.5)" d="M0 0 C18 -26 18 -62 0 -88 C-18 -62 -18 -26 0 0Z"/>
+            </g>
+          </g>
+
+          <!-- pulli (rice-flour dots) -->
+          <g fill="#FBF8F0" class="pulli">
+            <circle cx="0" cy="-160" r="3"/><circle cx="113" cy="-113" r="3"/>
+            <circle cx="160" cy="0" r="3"/><circle cx="113" cy="113" r="3"/>
+            <circle cx="0" cy="160" r="3"/><circle cx="-113" cy="113" r="3"/>
+            <circle cx="-160" cy="0" r="3"/><circle cx="-113" cy="-113" r="3"/>
+          </g>
+        </svg>
+
+        <!-- Tumbler + davara -->
+        <svg class="tumbler" viewBox="0 0 200 220">
+          <g class="steam" fill="none" stroke="#FBF8F0" stroke-width="3" stroke-linecap="round" opacity=".7">
+            <path class="wisp w1" d="M80 70 C70 55 92 45 82 28 C76 16 88 8 84 -4"/>
+            <path class="wisp w2" d="M100 70 C90 52 112 42 102 22 C96 10 108 2 104 -10"/>
+            <path class="wisp w3" d="M120 70 C110 55 132 45 122 28 C116 16 128 8 124 -4"/>
+          </g>
+          <!-- tumbler -->
+          <path d="M58 80 H142 L132 168 Q131 176 122 176 H78 Q69 176 68 168 Z" fill="#C9CED3"/>
+          <path d="M58 80 H142 L140 92 H60 Z" fill="#E8EBEE"/>
+          <path d="M72 100 L78 166" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".6"/>
+          <ellipse cx="100" cy="80" rx="42" ry="7" fill="#4A2A1A"/>
+          <ellipse cx="100" cy="80" rx="38" ry="5" fill="#7A4A2E"/>
+          <!-- davara -->
+          <path d="M34 168 Q34 196 100 196 Q166 196 166 168 Z" fill="#B7BDC3"/>
+          <ellipse cx="100" cy="168" rx="66" ry="9" fill="#DADFE3"/>
+          <ellipse cx="100" cy="170" rx="52" ry="5" fill="#9AA1A8"/>
+        </svg>
+
+        <span class="floater f1">Dosa</span>
+        <span class="floater f2">Pongal</span>
+        <span class="floater f3">Kaapi</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE ===== -->
+  <section class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Masala Dosa</span><span>Idli Sambar</span><span>Ghee Pongal</span><span>Medu Vada</span><span>Filter Kaapi</span><span>Curd Rice</span><span>Butter Paneer</span><span>Dal Makhani</span>
+      <span>Masala Dosa</span><span>Idli Sambar</span><span>Ghee Pongal</span><span>Medu Vada</span><span>Filter Kaapi</span><span>Curd Rice</span><span>Butter Paneer</span><span>Dal Makhani</span>
+    </div>
+  </section>
+
+  <!-- ===== MENU ===== -->
+  <section class="menu" id="menu">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">Today's menu</p>
+        <h2>Pick your plate</h2>
+      </div>
+
+      <div class="tabs reveal" role="tablist">
+        <button class="tab active" data-cat="south" role="tab" aria-selected="true">South Indian</button>
+        <button class="tab" data-cat="north" role="tab" aria-selected="false">North Indian</button>
+      </div>
+
+      <div class="dish-grid" id="dishGrid"></div>
+    </div>
+  </section>
+
+  <!-- ===== WHY ===== -->
+  <section class="why" id="why">
+    <div class="wrap">
+      <div class="reveal">
+        <p class="eyebrow">Why Zeps</p>
+        <h2>Made the way it's made at home</h2>
+      </div>
+      <div class="why-grid">
+        <article class="why-card reveal" style="--i:0">
+          <h3>Batter ground daily</h3>
+          <p>Rice and urad dal are soaked and ground every morning, so dosas and idlis come out light.</p>
+        </article>
+        <article class="why-card reveal" style="--i:1">
+          <h3>Packed to stay crisp</h3>
+          <p>Dosas travel with chutney and sambar boxed separately, so nothing goes soggy on the way.</p>
+        </article>
+        <article class="why-card reveal" style="--i:2">
+          <h3>Kaapi that wakes you up</h3>
+          <p>Decoction brewed fresh in the filter, mixed with hot milk when your order is packed.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOURS ===== -->
+  <section class="hours" id="hours">
+    <div class="wrap hours-inner reveal">
+      <h2>The kitchen is open</h2>
+      <p>Every day, 7:00 AM to 11:00 PM. Tiffin till noon, meals through the afternoon, dosa all evening.</p>
+      <a href="#menu" class="btn btn-primary">Order now</a>
+    </div>
+  </section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <a href="#top" class="logo">Zeps<span>.</span></a>
+      <p>A South Indian cloud kitchen, delivery only.</p>
+    </div>
+    <div>
+      <h4>Kitchen</h4>
+      <p>14 Depot Road, Unit 3<br>7:00 AM – 11:00 PM daily</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>hello@zeps.kitchen<br>+91 98765 43210</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">© 2026 Zeps Cloud Kitchen. Delivery only — no dine-in.</div>
+</footer>
+
+<!-- ===== CART DRAWER ===== -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-label="Your cart">
+  <div class="drawer-head">
+    <h3>Your cart</h3>
+    <button class="drawer-close" id="cartClose" aria-label="Close cart">&times;</button>
+  </div>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="drawer-foot">
+    <div class="total-row"><span>Total</span><strong id="cartTotal">₹0</strong></div>
+    <button class="btn btn-primary full" id="checkoutBtn">Checkout</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status"></div>
+
+<script src="script.js"></script>
+</body>
+</html>

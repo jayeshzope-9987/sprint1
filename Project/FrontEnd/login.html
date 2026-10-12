@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Log in | Hearth Cloud</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Instrument+Sans:wght@400;500;600&family=Noto+Sans+Tamil:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <div class="lamp l1" aria-hidden="true"></div>
+  <div class="lamp l2" aria-hidden="true"></div>
+
+  <main class="stage">
+    <section class="card" aria-labelledby="title">
+      <p class="hello" lang="ta">வணக்கம்</p>
+      <h1 id="title">Hearth Cloud</h1>
+      <p class="sub" id="sub">Log in to order fresh from our kitchen.</p>
+
+      <div class="seg" role="group" aria-label="Choose an option">
+        <button type="button" id="tabLogin" aria-pressed="true">Log in</button>
+        <button type="button" id="tabSignup" aria-pressed="false">Create account</button>
+      </div>
+
+      <form id="form" novalidate>
+        <label for="phone">Mobile number</label>
+        <div class="phone">
+          <span class="cc" title="The country code is fixed">+91</span>
+          <input id="phone" name="phone" inputmode="numeric" autocomplete="tel-national" maxlength="10" placeholder="10-digit number" required>
+        </div>
+
+        <label for="password">Password</label>
+        <div class="pw">
+          <input id="password" name="password" type="password" autocomplete="current-password" required>
+          <button type="button" id="peek" aria-pressed="false" aria-label="Show password">Show</button>
+        </div>
+
+        <div id="confirmRow" hidden>
+          <label for="confirm">Confirm password</label>
+          <input id="confirm" type="password" autocomplete="new-password">
+        </div>
+
+        <p class="hint" id="hint" hidden>Choose a password with at least 6 characters.</p>
+        <p class="error" id="error" role="alert"></p>
+        <button class="go" id="go" type="submit">Log in</button>
+      </form>
+    </section>
+
+    <p class="menu-line" aria-hidden="true">Idli · Dosa · Vada · Pongal · Filter kaapi</p>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>
